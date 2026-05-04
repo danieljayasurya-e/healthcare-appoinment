@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const ALLOWED_ORIGINS = (process.env.CLIENT_URL || 'https://healthcare-appoinment.vercel.app/api')
+const ALLOWED_ORIGINS = (process.env.CLIENT_URL || 'https://healthcare-appoinment.vercel.app')
   .split(',')
   .map((o) => o.trim());
 
