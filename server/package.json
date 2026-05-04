@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "db:create": "node scripts/createTables.js",
+    "db:seed": "node scripts/seedData.js",
+    "db:setup": "npm run db:create && npm run db:seed",
+    "db:seedprefilled": "node scripts/seedPrefilledData.js",
+    "db:reset": "node scripts/resetTables.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.840.0",
+    "@aws-sdk/client-kms": "^3.1037.0",
+    "@aws-sdk/lib-dynamodb": "^3.840.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "uuid": "^11.1.0"
+  }
+}
